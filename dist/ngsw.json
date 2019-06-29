@@ -1,0 +1,134 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/0.a46aec83da670c5a55e6.js",
+        "/1.b28f2bf5c2b8ac4cc4cf.js",
+        "/10.fb467eb0abb9aa7c25e1.js",
+        "/11.0448b8c4c39df4a9add5.js",
+        "/12.be9d6d4f0d99d1b632b8.js",
+        "/13.8ebdc8a290faedf045f7.js",
+        "/14.f37c14158d63bbb972b0.js",
+        "/15.6a2325c6ee23ba7241a6.js",
+        "/16.381eda4c6b9326d10a84.js",
+        "/2.8a613ecd55cf71bdeb8e.js",
+        "/4.d31c639ac0835cd96a8a.js",
+        "/8.f89e733b0c936b030060.js",
+        "/9.46dd603a2c64e33fea81.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.b9db1894a0f85e2f6ff5.js",
+        "/polyfills.ded2be9ea952bedbb1fa.js",
+        "/runtime.10104d6cd9eab48e448d.js",
+        "/scripts.b5ea1a3cf9f89977f873.js",
+        "/styles.dbfa341e7b44bec54e58.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/fonts/FontinSans/Fontin_Sans_B.otf",
+        "/assets/fonts/FontinSans/Fontin_Sans_BI.otf",
+        "/assets/fonts/FontinSans/Fontin_Sans_I.otf",
+        "/assets/fonts/FontinSans/Fontin_Sans_R.otf",
+        "/assets/fonts/FontinSans/Fontin_Sans_SC.otf",
+        "/assets/i18n/en.json",
+        "/assets/i18n/es.json",
+        "/assets/i18n/fr.json",
+        "/assets/i18n/ur.json",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/images/card-1.jpg",
+        "/assets/images/card-2.jpg",
+        "/assets/images/card-3.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "JConf",
+      "patterns": [
+        "\\/API\\/.*"
+      ],
+      "strategy": "performance",
+      "maxSize": 1000,
+      "maxAge": 86400000,
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/0.a46aec83da670c5a55e6.js": "0493ab81e42e0b029ba7e2c15cefc2b494a890e9",
+    "/1.b28f2bf5c2b8ac4cc4cf.js": "3c860428cc32544b089a0b1d3f9101662e882ea5",
+    "/10.fb467eb0abb9aa7c25e1.js": "e02760374c18b9166d51f80f4c763ff1376a7cf6",
+    "/11.0448b8c4c39df4a9add5.js": "b6a3cf165ba296ab13ff4e39e053eaa11a056cab",
+    "/12.be9d6d4f0d99d1b632b8.js": "0090ab89e8e6234b60cfcfae844044b2364ab064",
+    "/13.8ebdc8a290faedf045f7.js": "a61a8f2ee2250cb5c68e2c8284e022bf2d1c6859",
+    "/14.f37c14158d63bbb972b0.js": "fbabb3c265c74e397fefa777e076f5909e4e1af6",
+    "/15.6a2325c6ee23ba7241a6.js": "1b5791e2d46a97ef82ace8d33b83ba92cd998f99",
+    "/16.381eda4c6b9326d10a84.js": "934a2cc32fe95bb24ee5d97b1fd2e6756f5e8b38",
+    "/2.8a613ecd55cf71bdeb8e.js": "1cdf06ff78f0d55ab2344c0c2c15f12ed4d3b77d",
+    "/4.d31c639ac0835cd96a8a.js": "98a1cec119cdedd464d3cdb92e7046617b436a4e",
+    "/8.f89e733b0c936b030060.js": "849ffe699d59748236ab00473a351d4ff6ef80e6",
+    "/9.46dd603a2c64e33fea81.js": "bf1b709309b9b050df5b9aeb97f2253e95bc374f",
+    "/assets/fonts/FontinSans/Fontin_Sans_B.otf": "35845d36e336191f9db678a9c55ea3bcff92dfe4",
+    "/assets/fonts/FontinSans/Fontin_Sans_BI.otf": "1c0eaf3a484f2ae3f1754def68b5750a1d99d3f1",
+    "/assets/fonts/FontinSans/Fontin_Sans_I.otf": "db2dd0d7216ee27b6b05d924735c9a8a7f4faa70",
+    "/assets/fonts/FontinSans/Fontin_Sans_R.otf": "d2e2a88fd29e66fd71bd935877a5462c97a98c94",
+    "/assets/fonts/FontinSans/Fontin_Sans_SC.otf": "00c252c9d64ef9b15b6bd68f68a4a7545896f772",
+    "/assets/i18n/en.json": "2603b5ed3aca4329f5a78d1244c6c756774f8bbf",
+    "/assets/i18n/es.json": "ab39a9fbe853ba5ecebede95e6a994973f4a6d94",
+    "/assets/i18n/fr.json": "8647b8ce024dfbeef10591471fc0574ad18f0453",
+    "/assets/i18n/ur.json": "7fe2eeaa7a510633da7c14ee4262ff83a6947a1e",
+    "/assets/icons/icon-128x128.png": "65f5d3cff8d6791bbb8688688184d65401082cf9",
+    "/assets/icons/icon-144x144.png": "43b49694ae447d0971fe0ade1954f7441b07d102",
+    "/assets/icons/icon-152x152.png": "691c25463625a6ffe78f2fa43b80fe805187492b",
+    "/assets/icons/icon-192x192.png": "1c5e7b9eec61479e141c72ab89948aaba111b6df",
+    "/assets/icons/icon-384x384.png": "912ac30356417fe6848411d45ef413de0a7145d9",
+    "/assets/icons/icon-512x512.png": "bc4019d9a23fc6128d3a7ead393efe13c1c74f96",
+    "/assets/icons/icon-72x72.png": "c397c8acdb103cff05e27128b5d506ce571a748c",
+    "/assets/icons/icon-96x96.png": "d00b647a4f08663a19f63e73da51a23b8caf8bc1",
+    "/assets/images/card-1.jpg": "34b06ea96c607eb7ba122214a571290141295b09",
+    "/assets/images/card-2.jpg": "083b04c2cf1f0f54f483bcfbd0dad5a2bd155ae9",
+    "/assets/images/card-3.jpg": "a2eb1ac502716c05d32d01ef01ab60a2a9ca62ef",
+    "/favicon.ico": "031d2d6e6ebe3a9e4320069f8d0ea8dfb58ffe36",
+    "/index.html": "67b0c7d9b89418b9a0ba9cd4e7c28e5876579f4b",
+    "/main.b9db1894a0f85e2f6ff5.js": "f3922094820afe494ebaa0ad4d2ef6e07be53143",
+    "/polyfills.ded2be9ea952bedbb1fa.js": "567dafbefa301dee623c2bc66be3a86ccb31490e",
+    "/runtime.10104d6cd9eab48e448d.js": "c2dda294bfe5b2d71da7b7c725fae87a5545e386",
+    "/scripts.b5ea1a3cf9f89977f873.js": "00525715d3a0cf86bb2d76a1076f1082bedd60f6",
+    "/styles.dbfa341e7b44bec54e58.css": "a09186eaeaaa10d9b4cb1bb4a44e609d4692f79e"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

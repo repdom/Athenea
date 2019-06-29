@@ -19,11 +19,12 @@ export class LoginComponent implements OnInit {
     ngOnInit() {}
 
     onLogin() {
-        // localStorage.setItem('isLoggedin', 'true');
         this.spinner.show();
         this.loginService.getCharlasRegistradas(this.email).subscribe((serviceCharlasResponse) => {
             console.log(serviceCharlasResponse);
             this.cookieService.set('email', this.email, 1);
+            this.cookieService.set('id', serviceCharlasResponse.id);
+            localStorage.setItem('isLoggedin', 'true');
         }, (error) => {
             swal.fire({
                 type: 'error',

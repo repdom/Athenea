@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { LogueoService } from '../../services/logueo.service';
+import { CookieService } from 'ngx-cookie-service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
     selector: 'app-topnav',
@@ -12,7 +14,8 @@ export class TopnavComponent implements OnInit {
     public pushRightClass: string;
     private booleanObserver = true;
 
-    constructor(public router: Router, private translate: TranslateService, private logueoService: LogueoService) {
+    constructor(public router: Router, private translate: TranslateService, private logueoService: LogueoService,
+                private cookieService: CookieService, private spinner: NgxSpinnerService) {
         this.router.events.subscribe(val => {
             if (val instanceof NavigationEnd && window.innerWidth <= 992 && this.isToggled()) {
                 this.toggleSidebar();
@@ -42,7 +45,10 @@ export class TopnavComponent implements OnInit {
     }
 
     onLoggedout() {
-        localStorage.removeItem('isLoggedin');
+        this.spinner.show();
+        this.cookieService.delete('email');
+        this.cookieService.delete('id');
+        this.spinner.hide();
         this.router.navigate(['/login']);
     }
 

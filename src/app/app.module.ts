@@ -20,6 +20,8 @@ import { AppComponent } from './app.component';
 import { ComunesModule } from './comunes/comunes.module';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpModule } from '@angular/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
@@ -50,7 +52,8 @@ export const createTranslateLoader = (http: HttpClient) => {
                 deps: [HttpClient]
             }
         }),
-        ComunesModule
+        ComunesModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [CookieService],
     bootstrap: [AppComponent]

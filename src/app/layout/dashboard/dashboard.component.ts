@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
+import { LogueoService } from '../services/logueo.service';
+import { LoginService } from '../../services/login.service';
+import { CookieService } from 'ngx-cookie-service';
+import { Charla } from './charla/charla.component';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { DomSanitizer } from '@angular/platform-browser';
 
 export interface PeriodicElement {
     name: string;
@@ -24,18 +30,23 @@ const ELEMENT_DATA: PeriodicElement[] = [
     styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-    displayedColumns = ['position', 'name', 'weight', 'symbol'];
-    dataSource = new MatTableDataSource(ELEMENT_DATA);
-    places: Array<any> = [];
+    // displayedColumns = ['position', 'name', 'weight', 'symbol'];
+    // dataSource = new MatTableDataSource(ELEMENT_DATA);
+    // places: Array<any> = [];
+    private txtEmail = '';
+    public charlas: Charla[] = [];
 
     applyFilter(filterValue: string) {
-        filterValue = filterValue.trim(); // Remove whitespace
-        filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
-        this.dataSource.filter = filterValue;
+        // filterValue = filterValue.trim(); // Remove whitespace
+        // filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+        // this.dataSource.filter = filterValue;
     }
 
-    constructor() {
-        this.places = [
+
+
+    constructor(private logueoService: LoginService, private cookieService: CookieService,
+                private spinner: NgxSpinnerService) {
+        /*this.places = [
             {
                 imgSrc: 'assets/images/card-1.jpg',
                 place: 'Cozy 5 Stars Apartment',
@@ -63,8 +74,45 @@ export class DashboardComponent implements OnInit {
                 charge: '$459/night',
                 location: 'Milan, Italy'
             }
-        ];
+        ];*/
     }
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.txtEmail = this.cookieService.get('email');
+        this.obtenerCharlas();
+    }
+
+
+    obtenerCharlas() {
+        this.spinner.show();
+        this.logueoService.getCharlasRegistradas(this.txtEmail).subscribe(charlaResponse => {
+            charlaResponse.charlas.forEach(charlaElement => {
+                const charla: Charla = {
+                    strImagen: charlaElement.imagenCharlista,
+                    strDescripcion: charlaElement.descripcionCharla,
+                    strHora: charlaElement.horario.id,
+                    strTitulo: charlaElement.tema,
+                    strAula: charlaElement.aula.id,
+                    strCharlista: charlaElement.charlista,
+                    strDuracion: charlaElement.talkFormat
+                };
+                this.charlas.push(charla);
+            });
+        }, (error) => {
+
+        }, () => {
+            this.charlas.sort(function (a, b) {
+                if (Number(a.strHora) > Number(b.strHora)) {
+                  return 1;
+                }
+                if (Number(a.strHora) < Number(b.strHora)) {
+                  return -1;
+                }
+                // a must be equal to b
+                return 0;
+            });
+            this.spinner.hide();
+        });
+    }
+
 }

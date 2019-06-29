@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {
     MatButtonModule,
     MatIconModule,
@@ -16,6 +16,9 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { NavComponent } from './nav/nav.component';
 import { LogueoService } from './services/logueo.service';
+import { CronogramaComponent } from './dashboard/cronograma/cronograma.component';
+import { CronogramaModule } from './dashboard/cronograma/cronograma.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
     imports: [
@@ -28,7 +31,8 @@ import { LogueoService } from './services/logueo.service';
         MatInputModule,
         MatMenuModule,
         MatListModule,
-        TranslateModule
+        TranslateModule,
+        DashboardModule
     ],
     declarations: [LayoutComponent, NavComponent, TopnavComponent, SidebarComponent],
     providers: [

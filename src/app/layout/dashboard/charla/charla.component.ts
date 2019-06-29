@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 export class Charla {
   strImagen = '';
@@ -6,6 +7,8 @@ export class Charla {
   strHora = '';
   strTitulo = '';
   strAula = '';
+  strCharlista = '';
+  strDuracion = '';
 }
 
 @Component({
@@ -16,7 +19,7 @@ export class Charla {
 export class CharlaComponent implements OnInit {
   @Input() charla: Charla;
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit() {
   }

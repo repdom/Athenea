@@ -1,7 +1,13 @@
 <div id="sidebar">
     <mat-nav-list>
         <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/dashboard']">
-            <mat-icon class="sidenav-icon">dashboard</mat-icon> {{ 'Your conferences' | translate }}
+            <mat-icon class="sidenav-icon">event</mat-icon> {{ 'Your conferences' | translate }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/cronograma']">
+            <mat-icon class="sidenav-icon">date_range</mat-icon> {{ 'Schedule' | translate }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/entrada']">
+            <mat-icon class="sidenav-icon">assignment_turned_in</mat-icon> {{ 'Register' | translate }}
         </a>
         <!--<a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/charts']">
             <mat-icon class="sidenav-icon">bar_chart</mat-icon> {{ 'Charts' | translate }}

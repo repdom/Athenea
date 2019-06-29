@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LayoutComponent } from './layout.component';
+import { CronogramaComponent } from './dashboard/cronograma/cronograma.component';
+import { EntradaComponent } from './dashboard/entrada/entrada.component';
 
 const routes: Routes = [
     {
@@ -11,6 +13,14 @@ const routes: Routes = [
             {
                 path: '',
                 redirectTo: 'dashboard'
+            },
+            {
+                path: 'cronograma',
+                component: CronogramaComponent
+            },
+            {
+                path: 'entrada',
+                component: EntradaComponent
             },
             {
                 path: 'dashboard',

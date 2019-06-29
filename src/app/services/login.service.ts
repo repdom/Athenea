@@ -24,4 +24,16 @@ export class LoginService extends GeneralService {
         catchError(this.handlerError)
       );
   }
+
+  getCharlasGenerales() {
+    const headers = new Headers({ 'Accept': 'application/json', 'Content-Type': 'application/json'});
+    // headers.append('Authorization', this.cookieService);
+    const options = new RequestOptions({ headers: headers });
+    // tslint:disable-next-line:max-line-length
+    return this.http.get(Config.hostCharlas, options)
+      .pipe(
+        map(response => response.json()),
+        catchError(this.handlerError)
+      );
+  }
 }
