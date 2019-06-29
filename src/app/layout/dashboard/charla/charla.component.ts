@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 export class Charla {
+  numIdHorario = 0;
   strImagen = '';
   strDescripcion = '';
   strHora = '';

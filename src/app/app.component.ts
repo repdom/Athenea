@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { SwUpdate } from '@angular/service-worker';
+import Swal from 'sweetalert2';
 
 /*
   [6/4, 7:34 PM]: RED -> C22035 -> rgb(194,32,53)
@@ -30,6 +31,11 @@ export class AppComponent implements OnInit, AfterViewChecked {
         this.swUpdate.available.subscribe(() => {
             if (confirm('Una nueva versión disponible. ¿Desea cargar la nueva versión?')) {
                 window.location.reload();
+                Swal.fire({
+                  type: 'error',
+                  title: 'Oops...',
+                  text: String(window.location),
+                });
             }
         });
       }

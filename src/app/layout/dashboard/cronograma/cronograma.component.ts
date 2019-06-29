@@ -4,6 +4,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { LoginService } from '../../../services/login.service';
 import { TranslateService } from '@ngx-translate/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cronograma',
@@ -31,7 +32,8 @@ export class CronogramaComponent implements OnInit {
           strTitulo: elementCharla.tema,
           strAula: elementCharla.lugar,
           strCharlista: elementCharla.charlista,
-          strDuracion: elementCharla.talkFormat
+          strDuracion: elementCharla.talkFormat,
+          numIdHorario: 0
         };
         // console.log(charla);
         this.charlas.push(charla);
@@ -39,6 +41,11 @@ export class CronogramaComponent implements OnInit {
       // console.log(this.charlas);
     }, (error) => {
       this.spinner.hide();
+      swal.fire({
+        type: 'error',
+        title: 'Oops...',
+        text: 'Error en carga, revise conexión a internet',
+      });
     }, () => {
       this.spinner.hide();
     });

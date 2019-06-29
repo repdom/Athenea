@@ -6,6 +6,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { Charla } from './charla/charla.component';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { DomSanitizer } from '@angular/platform-browser';
+import swal from 'sweetalert2';
 
 export interface PeriodicElement {
     name: string;
@@ -90,22 +91,27 @@ export class DashboardComponent implements OnInit {
                 const charla: Charla = {
                     strImagen: charlaElement.imagenCharlista,
                     strDescripcion: charlaElement.descripcionCharla,
-                    strHora: charlaElement.horario.id,
+                    strHora: charlaElement.horario.value,
                     strTitulo: charlaElement.tema,
                     strAula: charlaElement.aula.id,
                     strCharlista: charlaElement.charlista,
-                    strDuracion: charlaElement.talkFormat
+                    strDuracion: charlaElement.talkFormat,
+                    numIdHorario: charlaElement.horario.id
                 };
                 this.charlas.push(charla);
             });
         }, (error) => {
-
+            swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Error en carga, revise conexión a internet',
+            });
         }, () => {
             this.charlas.sort(function (a, b) {
-                if (Number(a.strHora) > Number(b.strHora)) {
+                if (Number(a.numIdHorario) > Number(b.numIdHorario)) {
                   return 1;
                 }
-                if (Number(a.strHora) < Number(b.strHora)) {
+                if (Number(a.numIdHorario) < Number(b.numIdHorario)) {
                   return -1;
                 }
                 // a must be equal to b
