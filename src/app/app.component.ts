@@ -33,7 +33,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
             }
         });
       }
-      console.log(navigator.language.substr(0, 2));
+      // console.log(navigator.language.substr(0, 2));
       if (!this.cookieService.check('email')) {
         this.router.navigate(['/login']);
       }
