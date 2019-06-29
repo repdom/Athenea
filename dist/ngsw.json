@@ -63,7 +63,8 @@
     {
       "name": "JConf",
       "patterns": [
-        "\\/API\\/.*"
+        "\\/API\\/.*",
+        "\\/correo\\/.*"
       ],
       "strategy": "performance",
       "maxSize": 1000,

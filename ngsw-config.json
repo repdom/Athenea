@@ -27,7 +27,8 @@
     {
       "name": "JConf",
       "urls": [
-        "/API/**"
+        "/API/**",
+        "/correo/**"
       ],
       "cacheConfig": {
         "strategy": "performance",
