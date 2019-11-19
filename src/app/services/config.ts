@@ -4,9 +4,9 @@
 // import { CookieService } from 'ngx-cookie-service';
 
 export class Config {
-    public static host = 'https://form.jconfdominicana.org/API';
+    public static host = 'https://form.barcamp.org.do/API';
     public static hostSocket = 'http://157.230.146.235:35009';
-    public static hostCharlas = 'https://form.jconfdominicana.org/API/charlas';
+    public static hostCharlas = 'https://form.barcamp.org.do/API/charlas';
     // public static c: Config = null;
     // private rolService: RolService;
     // private rolMappingService: RolMappingService;

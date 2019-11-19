@@ -1,8 +1,8 @@
 {
-  "name": "JConf Dominicana",
-  "short_name": "JConf",
-  "theme_color": "#1976d2",
-  "background_color": "#221B4E",
+  "name": "Barcamp RD",
+  "short_name": "Barcamp RD",
+  "theme_color": "#222a5a",
+  "background_color": "#222a5a",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
